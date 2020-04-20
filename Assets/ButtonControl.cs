@@ -5,19 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class ButtonControl : MonoBehaviour
 {
-    public void MainScene();{
-        SceneManager.LoadScene("main manu");
+    public void MainScene(){
+        SceneManager.LoadScene("mainmanu");
 
     }
-    public void settingScene();{
+    public void settingScene(){
         SceneManager.LoadScene("setting");
 
     }
-    public void minigameScene();{
+    public void minigameScene(){
         SceneManager.LoadScene("minigame");
 
     }
-    public void workshopScene();{
+    public void workshopScene(){
         SceneManager.LoadScene("workshop");
 
     }
