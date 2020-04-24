@@ -8,19 +8,23 @@ public class MusicSet : MonoBehaviour
     public bool music_on;
     public float movespeed;
     private float t = 0.0f;
-    private bool switching;
-    private float onX;
-    private float offX;
+    private bool switching =false;
+    private float onX = 18.5f;
+    private float offX = -18.5f;
+    private float Actx;
     private RectTransform toggle;
     private RectTransform handle;
 
     public void Awake(){
             toggle = indicator.GetComponent<RectTransform>();
-            onX=toggle.sizeDelta.x;
-            offX=onX-2;
+        //    onX=toggle.sizeDelta.x;
+        //   offX=onX-40;
+       //     Debug.Log("klop");
+       //Debug.Log("onX "+onX);
     }
 
     public void ToggleMusic(){
+        Debug.Log("Debugg");
         if(music_on){
             music_on=false;
             switching = true;
@@ -28,9 +32,11 @@ public class MusicSet : MonoBehaviour
             music_on=true;
             switching = true;
         }
+        
 
     }
-    void update(){
+    void Update(){
+  //      Actx=toggle.sizeDelta.x;
         if(switching){
             if(music_on){
                 toggle.localPosition = MoveIndicator(indicator,offX,onX);
@@ -39,12 +45,14 @@ public class MusicSet : MonoBehaviour
             }
             
         }
+       // Debug.Log("Say Hi");
     }
     private Vector3 MoveIndicator(GameObject movehand,float startX,float endX){
         Vector3 position = new Vector3(Mathf.Lerp(startX,endX,t+=movespeed*Time.deltaTime),0,0);
         if(t>1){
             t=0;
             switching = false;
+
         }
         return position;
 
