@@ -53,7 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ButtonControl.cs" />
+     <Compile Include="Assets\Scenes\MainManuScene\ButtonControl.cs" />
+     <Compile Include="Assets\Scenes\SettingScene\MusicSet.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/pipomk/Documents/GitHub/New-Unity-Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
