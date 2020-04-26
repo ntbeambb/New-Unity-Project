@@ -17,10 +17,6 @@ public class MusicSet : MonoBehaviour
 
     public void Awake(){
             toggle = indicator.GetComponent<RectTransform>();
-        //    onX=toggle.sizeDelta.x;
-        //   offX=onX-40;
-       //     Debug.Log("klop");
-       //Debug.Log("onX "+onX);
     }
 
     public void ToggleMusic(){
