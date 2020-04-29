@@ -20,7 +20,7 @@ public class MusicSet : MonoBehaviour
     }
 
     public void ToggleMusic(){
-        Debug.Log("Debugg");
+     //   Debug.Log("Debugg");
         if(music_on){
             music_on=false;
             switching = true;
